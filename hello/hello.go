@@ -13,9 +13,10 @@ func main() {
 	log.SetFlags(log.Ldate | log.Ltime)
 
 	// Get a greeting message and print it.
-	message, err := greetings.Hello("Gladys")
+	names := []string{"Gladys", "Samantha", "Darrin"}
+	messages, err := greetings.Hellos(names)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(message)
+	fmt.Println(messages)
 }
